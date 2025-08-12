@@ -1,105 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        /* 主選單外觀 */
-        .menu {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            background-color: #333;
-            display: flex;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>原生 Select 美化</title>
+  <style>
+    /* select 外觀設定 */
+    select {
+      border: 1px solid #ccc;
+      /* 灰色外框 */
+      background-color: #f5f5f5;
+      /* 淡灰色底 */
+      color: #000;
+      /* 黑色文字 */
+      padding: 8px 12px;
+      /* 內距 */
+      border-radius: 4px;
+      /* 圓角 */
+      font-size: 16px;
+      /* 字體大小 */
+      appearance: none;
+      /* 移除瀏覽器預設箭頭 */
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      cursor: pointer;
+    }
 
-        .menu>li {
-            position: relative;
-        }
+    /* 讓 select 有一個箭頭圖示（可選） */
+    select {
+      background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='14' viewBox='0 0 24 24' width='14' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      background-size: 14px;
+    }
 
-        .menu>li>a {
-            display: block;
-            padding: 10px 20px;
-            color: white;
-            text-decoration: none;
-        }
+    /* option 預設樣式 */
+    option {
+      background-color: #f5f5f5;
+      /* 淡灰色 */
+      color: #000;
+      /* 黑色字 */
+    }
 
-        .menu>li>a:hover {
-            background-color: #555;
-        }
+    /* 滑過 option（部分瀏覽器支援） */
+    option:hover {
+      background-color: #ddd;
+      /* 滑過變深灰 */
+    }
 
-        /* 子選單容器：先收起 */
-        .dropdown {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            background-color: #444;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            min-width: 150px;
-
-            max-height: 0;
-            overflow: hidden;
-            opacity: 0;
-            visibility: hidden;
-            transition: max-height 0.4s ease, opacity 0.4s ease;
-        }
-
-        /* 子選單項目初始狀態 */
-        .dropdown li {
-            opacity: 0;
-            transform: translateY(-10px);
-            transition: opacity 0.3s ease, transform 0.3s ease;
-        }
-
-        /* 滑過展開容器 */
-        .menu li:hover>.dropdown {
-            max-height: 500px;
-            opacity: 1;
-            visibility: visible;
-        }
-
-        /* 手風琴延遲效果 */
-        /* .menu li:hover > .dropdown li {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.menu li:hover > .dropdown li:nth-child(1) {
-  transition-delay: 0.05s;
-}
-.menu li:hover > .dropdown li:nth-child(2) {
-  transition-delay: 0.15s;
-}
-.menu li:hover > .dropdown li:nth-child(3) {
-  transition-delay: 0.25s;
-}
-.menu li:hover > .dropdown li:nth-child(4) {
-  transition-delay: 0.35s;
-} */
-    </style>
+    /* 選中後的 option */
+    option:checked {
+      background-color: #ccc;
+    }
+  </style>
 </head>
 
 <body>
-    <ul class="menu">
-        <li>
-            <a href="#">預訂車票</a>
-            <ul class="dropdown">
-                <li><a href="#">一般訂票</a></li>
-                <li><a href="#">優惠訂票</a></li>
-            </ul>
-        </li>
-        <li>
-            <a href="#">管理訂位</a>
-            <ul class="dropdown">
-                <li><a href="#">子選單 2-1</a></li>
-                <li><a href="#">子選單 2-2</a></li>
-            </ul>
-        </li>
-    </ul>
+
+  <h2>原生 Select 美化範例</h2>
+  <select>
+    <option value="">請選擇</option>
+    <option value="1">選項一</option>
+    <option value="2">選項二</option>
+    <option value="3">選項三</option>
+  </select>
 
 </body>
 

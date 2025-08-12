@@ -6,15 +6,16 @@
     box-sizing: border-box;
     list-style: none;
     font-family: "Chocolate Classical Sans", sans-serif;
+    text-decoration: none;
 }
 
 /* =====header starts===== */
 header {
-    background: #999;
-    padding: 2% 5%;
+    background: #ffffff;
+    padding: 12px 24px;
 }
 
-.banner {
+.head {
     width: 100%;
     margin: auto;
     display: flex;
@@ -27,114 +28,335 @@ header {
     width: 125px;
 }
 
-/* =====header pohone menu===== */
-.menu {
-    width: 3rem;
-    height: 3rem;
-    background-color: #ffffff;
-    position: relative;
-    /* top: 100px;
-            left: calc((100% - 3rem)/2); */
+/* =====hamburger hide===== */
+.hamburger {
+    font-size: 24px;
+    cursor: pointer;
     display: none;
 }
 
-.menu::after {
-    content: "";
-    position: absolute;
-    top: calc((100% - 1rem)/2);
-    left: calc((100% - 1rem)/2);
-    width: 1rem;
-    height: 0.2rem;
-    border-top: 0.6rem #333 double;
-    border-bottom: 0.2rem #333 solid;
+.menu-toggle {
+    display: none;
 }
 
-/* 主選單外觀 */
-.menu-list {
+/* ===== 桌面版選單 ===== */
+.menu {
     list-style: none;
     padding: 0;
     margin: 0;
-    background-color: #333;
     display: flex;
 }
 
-.menu-list>li {
+.menu>li {
     position: relative;
 }
 
-.menu-list>li>a {
+.menu>li>a {
     display: block;
     padding: 10px 20px;
-    color: white;
-    text-decoration: none;
+    color: #333;
 }
 
-.menu-list>li>a:hover {
-    background-color: #555;
+.menu>li>a:hover {
+    color: #db5009;
 }
 
-/* 子選單容器：先收起 */
+.close-btn {
+    display: none;
+}
+
+/* =====子選單===== */
 .dropdown {
     list-style: none;
     padding: 0;
     margin: 0;
-    background-color: #444;
+    background-color: white;
     position: absolute;
     top: 100%;
     left: 0;
     min-width: 150px;
-
     max-height: 0;
     overflow: hidden;
     opacity: 0;
     visibility: hidden;
     transition: max-height 0.4s ease, opacity 0.4s ease;
+    border-bottom: 1px solid #e9e9e9;
 }
 
-/* 子選單項目初始狀態 */
-.dropdown li {
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+.dropdown li a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
 }
 
-/* 滑過展開容器 */
-.menu-list li:hover>.dropdown {
+.dropdown li a:hover {
+    background-color: #f0f0f0;
+}
+
+.menu li:hover>.dropdown {
     max-height: 500px;
     opacity: 1;
     visibility: visible;
 }
 
-/* =====header ends===== */
+
+/* =====section starts===== */
+
+.container {
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../img/bg1.jpg");
+    background-color: rgba(97, 179, 226, 0.8);
+    /* 混和顏色 */
+    background-blend-mode: multiply;
+    padding: 0px 4.75rem;
+}
+
+.banner {
+    margin-bottom: 10px;
+}
+
+.home-title {
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 32px;
+    margin-top: 36px;
+    margin-right: 16px;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+/* =====section ends===== */
+/* =====search box starts===== */
+.search-box {
+    background-color: #ffffff;
+    border-radius: 5px;
+    border-top-left-radius: 0px;
+    display: flex;
+    flex-direction: column;
+    padding: 12px 20px 16px 20px;
+}
+
+/* =====選擇訂票方式===== */
+.main ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.onactive {
+    height: 60px;
+    width: 90px;
+    border-top-left-radius: 5px;
+    background-color: #ffffff;
+    padding: 12px;
+    padding-top: 16px;
+}
+
+.offactive {
+    height: 60px;
+    width: 90px;
+    border-top-right-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 12px;
+    padding-top: 16px;
+
+}
+
+.active {
+    color: #db5009;
+    font-weight: 500;
+}
+
+.anotherpage {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+/* =====選擇訂票方式===== */
+/* =====車程===== */
+
+.first-column {
+    width: 300px;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.text14px {
+    font-size: 14px;
+}
 
 
-/* phone mode <480*/
-@media screen and (max-width: 30rem) {
+select {
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    color: #333;
+    padding: 8px 28px 8px 0;
+    font-size: 16px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    outline: none;
+}
+
+form {
+    width: auto;
+    position: relative;
+    /* 只是讓position作用 */
+}
+
+.arrow {
+    width: 16px;
+    margin-right: 10px;
+    position: absolute;
+    right: 2px;
+    top: 14px;
+}
+
+option {
+    background-color: #ffffff;
+    color: #333;
+    outline: none;
+}
+
+option:hover {
+    background-color: #ddd;
+}
+
+option:checked {
+    background-color: #ccc;
+}
+
+.form-check {
+    margin-left: 16px;
+}
+
+/* =====車程===== */
+/* =====起訖選擇===== */
+
+.box-design {
+    border-radius: 5px;
+    border: rgb(214, 214, 214)solid 1px;
+}
+
+.img36px {
+    color: #db5009;
+}
+
+/* =====起訖選擇===== */
+/* =====search box ends===== */
 
 
-    /* =====header===== */
-    .menu {
+/* ================================ 手機版樣式 ========================================== */
+@media (max-width: 660px) {
+
+    /* =====header starts===== */
+    .hamburger {
         display: block;
     }
 
-
-
-
-
-
-    .background {
-        background: #eb9393;
+    .menu {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -250px;
+        width: 250px;
+        height: 100%;
+        background-color: #ffffff;
+        padding-top: 60px;
+        transition: right 0.3s ease;
     }
 
-    .search-box {
-        background-color: rgb(183, 231, 144);
+    /* 顯示主選單 */
+    .menu-toggle:checked~.menu {
+        right: 0;
     }
 
-    .link-to-anotherpage {
-        background: #9de2cb;
+    .menu>li>a {
+        padding: 15px;
+        color: #999;
+        font-size: 14px;
+    }
+
+    /* 顯示子選單 */
+
+    .dropdown {
+        display: block;
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+    }
+
+    .dropdown li a {
+        color: #333;
+        display: block;
+        padding: 4px 16px;
+    }
+
+    /* .dropdown {
+        position: static;
+        border: none;
+    } */
+
+    .menu li>.dropdown {
+        max-height: none;
+        opacity: 1;
+        visibility: visible;
+        padding-left: 4px;
+        padding-bottom: 16px;
+    }
+
+    /* X 按鈕樣式 */
+    .close-btn {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 24px;
+        color: #666;
+        cursor: pointer;
+        display: block;
+    }
+
+    /* =====header ends===== */
+    /* =====section starts===== */
+
+    h2 {
+        display: none;
     }
 
     .container {
-        background-color: rgba(138, 74, 32, 0.2);
+        padding: 24px;
     }
+
+    /* =====section ends===== */
+
 }
