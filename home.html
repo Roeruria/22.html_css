@@ -89,26 +89,26 @@
             <div class="flex-between">
                 <div class="first-column flex-row">
                     <form action="" class="">
-                        <select name="" id="">
+                        <select name="" class="dropdown-first">
                             <option value="">單程</option>
                             <option value="">去回程</option>
                         </select><img src=".//img/angle-down-solid-full.svg" alt="" class="arrow">
                     </form>
                     <form action="">
-                        <select name="" id="">
+                        <select name="" class="dropdown-first">
                             <option value="">標準車廂</option>
                             <option value="">商務車廂</option>
                         </select><img src=".//img/angle-down-solid-full.svg" alt="" class="arrow">
                     </form>
                     <form action="">
-                        <select name="" id="">
+                        <select name="" class="dropdown-first">
                             <option value="">無座位偏好</option>
                             <option value="">靠窗優先</option>
                             <option value="">走道優先</option>
                         </select><img src=".//img/angle-down-solid-full.svg" alt="" class="arrow">
                     </form>
                 </div>
-                <div class="flex-row">
+                <div class="flex-row acenter">
                     <p class="text14px">搜尋方式</p>
                     <div class="form-check">
                         <input class="" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
@@ -126,156 +126,184 @@
             </div>
             <!-- 方式 ends-->
             <!-- 車次 starts-->
-            <!-- 1 -->
-            <div class="">
-                <div class="box-design flex-row"><i class="fa-solid fa-location-dot img36px"></i>
-                    <div class="flex-column">
-                        <lable class="text14px">出發站</lable>
-                        <select name="" id="">
-                            <option selected>請選擇...</option>
-                            <option value="1">南港</option>
-                            <option value="2">台北</option>
-                            <option value="3">板橋</option>
-                            <option value="4">桃園</option>
-                            <option value="5">新竹</option>
-                            <option value="6">苗栗</option>
-                            <option value="7">台中</option>
-                            <option value="8">彰化</option>
-                            <option value="9">雲林</option>
-                            <option value="10">嘉義</option>
-                            <option value="11">台南</option>
-                            <option value="12">左營</option>
-                        </select>
-                    </div>
+            <div class="flex-row flex-between">
+                <!-- 1 站名-->
+                <div class="flex-row center position ">
+                    <div class="box-design-first flex-row ">
+                        <i class="fa-solid fa-location-dot icon24px"></i>
+                        <div class="flex-column">
+                            <lable class="text14px">出發站</lable>
+                            <select name="" class="dropdown-second">
+                                <option selected>請選擇...</option>
+                                <option value="1">南港</option>
+                                <option value="2">台北</option>
+                                <option value="3">板橋</option>
+                                <option value="4">桃園</option>
+                                <option value="5">新竹</option>
+                                <option value="6">苗栗</option>
+                                <option value="7">台中</option>
+                                <option value="8">彰化</option>
+                                <option value="9">雲林</option>
+                                <option value="10">嘉義</option>
+                                <option value="11">台南</option>
+                                <option value="12">左營</option>
+                            </select>
+                        </div>
 
+                    </div>
+                    <div>
+                        <a href="#"><img src="./img/exchange.png" alt="" class="swich-icon "></a>
+                    </div>
+                    <div class="box-design-first flex-row">
+                        <i class="fa-solid fa-location-dot icon24px"></i>
+                        <div class="flex-column">
+                            <lable class="text14px">抵達站</lable>
+                            <select name="" class="dropdown-second">
+                                <option selected>請選擇...</option>
+                                <option value="1">南港</option>
+                                <option value="2">台北</option>
+                                <option value="3">板橋</option>
+                                <option value="4">桃園</option>
+                                <option value="5">新竹</option>
+                                <option value="6">苗栗</option>
+                                <option value="7">台中</option>
+                                <option value="8">彰化</option>
+                                <option value="9">雲林</option>
+                                <option value="10">嘉義</option>
+                                <option value="11">台南</option>
+                                <option value="12">左營</option>
+                            </select>
+                        </div>
+
+                    </div>
                 </div>
-                <div class="swich-icon"><img src="./img/exchange.png" alt=""></div>
-                <div class="box-design flex-column">
-                    <lable>到達站</lable>
-                    <select name="" id="">
-                        <option selected>請選擇...</option>
-                        <option value="1">南港</option>
-                        <option value="2">台北</option>
-                        <option value="3">板橋</option>
-                        <option value="4">桃園</option>
-                        <option value="5">新竹</option>
-                        <option value="6">苗栗</option>
-                        <option value="7">台中</option>
-                        <option value="8">彰化</option>
-                        <option value="9">雲林</option>
-                        <option value="10">嘉義</option>
-                        <option value="11">台南</option>
-                        <option value="12">左營</option>
-                    </select>
+                <div>
+                    <!-- 2 去程-->
+                    <div class="flex-row acenter position ">
+                        <div class="box-design-first flex-row">
+                            <i class="fa-regular fa-calendar icon24px"></i>
+                            <div class="flex-column">
+                                <label class="text14px">出發日期</label>
+                                <input type="date" class="dropdown-second date-input" name="" value="today" min="today"
+                                    max="2025-09-30" />
+                            </div>
+                        </div>
+                        <div class="box-design-first flex-row">
+                            <i class="fa-regular fa-clock icon24px"></i>
+                            <div class="flex-column">
+                                <label class="text14px">出發時間</label>
+                                <select name="" id="" class="dropdown-second">
+                                    <option value="">00:00</option>
+                                    <option value="">00:30</option>
+                                    <option value="">05:00</option>
+                                    <option value="">05:30</option>
+                                    <option value="">06:00</option>
+                                    <option value="">06:30</option>
+                                    <option value="">07:00</option>
+                                    <option value="">07:30</option>
+                                    <option value="">08:00</option>
+                                    <option value="">08:30</option>
+                                    <option value="">09:00</option>
+                                    <option value="">09:30</option>
+                                    <option value="">10:00</option>
+                                    <option value="">10:30</option>
+                                    <option value="">11:00</option>
+                                    <option value="">11:30</option>
+                                    <option value="">12:00</option>
+                                    <option value="">12:30</option>
+                                    <option value="">13:00</option>
+                                    <option value="">13:30</option>
+                                    <option value="">14:00</option>
+                                    <option value="">14:30</option>
+                                    <option value="">15:00</option>
+                                    <option value="">15:30</option>
+                                    <option value="">16:00</option>
+                                    <option value="">16:30</option>
+                                    <option value="">17:00</option>
+                                    <option value="">17:30</option>
+                                    <option value="">18:00</option>
+                                    <option value="">18:30</option>
+                                    <option value="">19:00</option>
+                                    <option value="">19:30</option>
+                                    <option value="">20:00</option>
+                                    <option value="">20:30</option>
+                                    <option value="">21:00</option>
+                                    <option value="">21:30</option>
+                                    <option value="">22:00</option>
+                                    <option value="">22:30</option>
+                                    <option value="">23:00</option>
+                                    <option value="">23:30</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 3 回程-->
+                    <!-- <div class="flex-row acenter position">
+                        <div class="form-group box-design-first flex-row">
+                            <i class="fa-regular fa-calendar icon24px"></i>
+                            <div class="flex-column">
+                                <label class="text14px">回程日期</label>
+                                <input type="date" class="dropdown-second date-input" name="" value="today" min="today"
+                                    max="2025-09-30" />
+                            </div>
+                        </div>
+                        <div class="form-group box-design-first flex-row">
+                            <div class="flex-column">
+                                <i class="fa-regular fa-clock icon24px"></i>
+                                <label class="text14px">回程時間</label>
+                                <select name="" id="" class="dropdown-second">
+                                    <option value="">00:00</option>
+                                    <option value="">00:30</option>
+                                    <option value="">05:00</option>
+                                    <option value="">05:30</option>
+                                    <option value="">06:00</option>
+                                    <option value="">06:30</option>
+                                    <option value="">07:00</option>
+                                    <option value="">07:30</option>
+                                    <option value="">08:00</option>
+                                    <option value="">08:30</option>
+                                    <option value="">09:00</option>
+                                    <option value="">09:30</option>
+                                    <option value="">10:00</option>
+                                    <option value="">10:30</option>
+                                    <option value="">11:00</option>
+                                    <option value="">11:30</option>
+                                    <option value="">12:00</option>
+                                    <option value="">12:30</option>
+                                    <option value="">13:00</option>
+                                    <option value="">13:30</option>
+                                    <option value="">14:00</option>
+                                    <option value="">14:30</option>
+                                    <option value="">15:00</option>
+                                    <option value="">15:30</option>
+                                    <option value="">16:00</option>
+                                    <option value="">16:30</option>
+                                    <option value="">17:00</option>
+                                    <option value="">17:30</option>
+                                    <option value="">18:00</option>
+                                    <option value="">18:30</option>
+                                    <option value="">19:00</option>
+                                    <option value="">19:30</option>
+                                    <option value="">20:00</option>
+                                    <option value="">20:30</option>
+                                    <option value="">21:00</option>
+                                    <option value="">21:30</option>
+                                    <option value="">22:00</option>
+                                    <option value="">22:30</option>
+                                    <option value="">23:00</option>
+                                    <option value="">23:30</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div> -->
                 </div>
             </div>
-            <!-- 2 -->
-            <div>
-                <div class="form-group">
-                    <label for="start">出發日期</label>
-                    <input type="date" id="start" name="" value="today" min="today" max="2025-09-30" />
-                </div>
-                <div class="form-group">
-                    <label for="start">抵達日期</label>
-                    <input type="date" id="start" name="" value="today" min="today" max="2025-09-30" />
-                </div>
-            </div>
-            <!-- 3 -->
-            <div class="form-group">
-                <label>出發時間</label>
-                <select name="" id="">
-                    <option value="">00:00</option>
-                    <option value="">00:30</option>
-                    <option value="">05:00</option>
-                    <option value="">05:30</option>
-                    <option value="">06:00</option>
-                    <option value="">06:30</option>
-                    <option value="">07:00</option>
-                    <option value="">07:30</option>
-                    <option value="">08:00</option>
-                    <option value="">08:30</option>
-                    <option value="">09:00</option>
-                    <option value="">09:30</option>
-                    <option value="">10:00</option>
-                    <option value="">10:30</option>
-                    <option value="">11:00</option>
-                    <option value="">11:30</option>
-                    <option value="">12:00</option>
-                    <option value="">12:30</option>
-                    <option value="">13:00</option>
-                    <option value="">13:30</option>
-                    <option value="">14:00</option>
-                    <option value="">14:30</option>
-                    <option value="">15:00</option>
-                    <option value="">15:30</option>
-                    <option value="">16:00</option>
-                    <option value="">16:30</option>
-                    <option value="">17:00</option>
-                    <option value="">17:30</option>
-                    <option value="">18:00</option>
-                    <option value="">18:30</option>
-                    <option value="">19:00</option>
-                    <option value="">19:30</option>
-                    <option value="">20:00</option>
-                    <option value="">20:30</option>
-                    <option value="">21:00</option>
-                    <option value="">21:30</option>
-                    <option value="">22:00</option>
-                    <option value="">22:30</option>
-                    <option value="">23:00</option>
-                    <option value="">23:30</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label>回程時間</label>
-                <select name="" id="">
-                    <option value="">00:00</option>
-                    <option value="">00:30</option>
-                    <option value="">05:00</option>
-                    <option value="">05:30</option>
-                    <option value="">06:00</option>
-                    <option value="">06:30</option>
-                    <option value="">07:00</option>
-                    <option value="">07:30</option>
-                    <option value="">08:00</option>
-                    <option value="">08:30</option>
-                    <option value="">09:00</option>
-                    <option value="">09:30</option>
-                    <option value="">10:00</option>
-                    <option value="">10:30</option>
-                    <option value="">11:00</option>
-                    <option value="">11:30</option>
-                    <option value="">12:00</option>
-                    <option value="">12:30</option>
-                    <option value="">13:00</option>
-                    <option value="">13:30</option>
-                    <option value="">14:00</option>
-                    <option value="">14:30</option>
-                    <option value="">15:00</option>
-                    <option value="">15:30</option>
-                    <option value="">16:00</option>
-                    <option value="">16:30</option>
-                    <option value="">17:00</option>
-                    <option value="">17:30</option>
-                    <option value="">18:00</option>
-                    <option value="">18:30</option>
-                    <option value="">19:00</option>
-                    <option value="">19:30</option>
-                    <option value="">20:00</option>
-                    <option value="">20:30</option>
-                    <option value="">21:00</option>
-                    <option value="">21:30</option>
-                    <option value="">22:00</option>
-                    <option value="">22:30</option>
-                    <option value="">23:00</option>
-                    <option value="">23:30</option>
-                </select>
-            </div>
-            <!-- 4 -->
+
+            <!-- 4 票種-->
             <div class="form-ticket">
-                <div class="">
-                    <lable>全票</lable>
-                    <select name="" id="">
+                <div class="box-design-ticket flex-column">
+                    <lable class="text14px">全票</lable>
+                    <select name="" class="dropdown-ticket">
                         <option selected>0</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -289,9 +317,9 @@
                         <option value="2">10</option>
                     </select>
                 </div>
-                <div class="">
-                    <lable>孩童票(6-11)</lable>
-                    <select name="" id="">
+                <div class="box-design-ticket flex-column">
+                    <lable class="text14px">孩童票(6-11)</lable>
+                    <select name="" class="dropdown-ticket">
                         <option selected>0</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -305,9 +333,9 @@
                         <option value="2">10</option>
                     </select>
                 </div>
-                <div class="">
-                    <lable>愛心票</lable>
-                    <select name="" id="">
+                <div class="box-design-ticket flex-column">
+                    <lable class="text14px">愛心票</lable>
+                    <select name="" class="dropdown-ticket">
                         <option selected>0</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -321,9 +349,9 @@
                         <option value="2">10</option>
                     </select>
                 </div>
-                <div class="">
-                    <lable>敬老票</lable>
-                    <select name="" id="">
+                <div class="box-design-ticket flex-column">
+                    <lable class="text14px">敬老票</lable>
+                    <select name="" class="dropdown-ticket">
                         <option selected>0</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -337,9 +365,9 @@
                         <option value="2">10</option>
                     </select>
                 </div>
-                <div class="">
-                    <lable>大學生票</lable>
-                    <select name="" id="">
+                <div class="box-design-ticket flex-column">
+                    <lable class="text14px">大學生票</lable>
+                    <select name="" class="dropdown-ticket">
                         <option selected>0</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -353,9 +381,9 @@
                         <option value="2">10</option>
                     </select>
                 </div>
-                <div class="">
-                    <lable>少年票</lable>
-                    <select name="" id="">
+                <div class="box-design-ticket flex-column">
+                    <lable class="text14px">少年票</lable>
+                    <select name="" class="dropdown-ticket">
                         <option selected>0</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -372,11 +400,11 @@
             </div>
             <!-- 車次 ends-->
             <!-- 驗證 -->
-            <div class="">
-                <img src="./img/0.png" alt=""><input type="text" size=4>
+            <div class="end">
+                <img src="./img/0.png" alt="" class="mr28px"><input type="text" size=4 class="box-design-text">
             </div>
 
-            <input type="button" value="開始查詢">
+            <input type="button" value="開始查詢" class="button">
         </div>
     </div>
     <!-- search box ends -->
@@ -450,17 +478,20 @@
             </li>
             <li>
                 <p class="notice-gray">身分說明：</p>
-                <ul>
-                    <li>孩童票購票說明：未滿12歲之兒童得購買孩童票，身高未滿115公分之兒童不佔位得免票，但應由已購全票或成年旅客陪同，且每位旅客攜帶之免票孩童以2人為限。身高超過150公分且未滿12歲兒童，或身高超過115公分且未滿6歲兒童應出示身分證明。
-                    </li>
-                    <li>敬老票購票說明：乘車當日年滿65歲(含)以上之中華民國國民，憑有效之身分證明文件得購買敬老票。</li>
-                    <li>愛心票購票說明：持有身心障礙證明之中華民國國民得購買愛心票。（身心障礙證明背面之「必要陪伴者優惠措施」欄位註記有「國內大眾運輸工具」字樣者，始提供必要陪伴者一人愛心票優惠）。如同行陪伴者為外籍人士，乘客資訊請以身心障礙旅客之姓名及身分證字號登錄。本系統目前並無提供預訂輪椅座位。預訂輪椅座位請洽各車站售票窗口、致電客服專線，或使用數位客服等通路。
-                    </li>
-                    <li>大學生票購票說明：中華民國大專院校在學生始得購買。持用學生票乘車時，應攜帶「學生證正本」，如學生證無當學期註冊章，須合併出示「在學證明正本」方得適用優惠。無本人有效證件者應照章補票並得加收票價差額百分之五十。詳情請參閱企網大學生優惠活動說明。
-                    </li>
-                    <li>少年票購票說明：年齡介於12~18歲之青少年始得購買。持用少年票乘車時，應攜帶附照片、出生年月日之身分證件以備查驗，無本人有效證件者應照章補票並得加收票價差額百分之五十。詳情請參閱企網少年優惠活動說明。
-                    </li>
-                </ul>
+                <div class="notice-ticket">
+                    <ul>
+                        <li>孩童票購票說明：未滿12歲之兒童得購買孩童票，身高未滿115公分之兒童不佔位得免票，但應由已購全票或成年旅客陪同，且每位旅客攜帶之免票孩童以2人為限。身高超過150公分且未滿12歲兒童，或身高超過115公分且未滿6歲兒童應出示身分證明。
+                        </li>
+                        <li>敬老票購票說明：乘車當日年滿65歲(含)以上之中華民國國民，憑有效之身分證明文件得購買敬老票。</li>
+                        <li>愛心票購票說明：持有身心障礙證明之中華民國國民得購買愛心票。（身心障礙證明背面之「必要陪伴者優惠措施」欄位註記有「國內大眾運輸工具」字樣者，始提供必要陪伴者一人愛心票優惠）。如同行陪伴者為外籍人士，乘客資訊請以身心障礙旅客之姓名及身分證字號登錄。本系統目前並無提供預訂輪椅座位。預訂輪椅座位請洽各車站售票窗口、致電客服專線，或使用數位客服等通路。
+                        </li>
+                        <li>大學生票購票說明：中華民國大專院校在學生始得購買。持用學生票乘車時，應攜帶「學生證正本」，如學生證無當學期註冊章，須合併出示「在學證明正本」方得適用優惠。無本人有效證件者應照章補票並得加收票價差額百分之五十。詳情請參閱企網大學生優惠活動說明。
+                        </li>
+                        <li>少年票購票說明：年齡介於12~18歲之青少年始得購買。持用少年票乘車時，應攜帶附照片、出生年月日之身分證件以備查驗，無本人有效證件者應照章補票並得加收票價差額百分之五十。詳情請參閱企網少年優惠活動說明。
+                        </li>
+                    </ul>
+                </div>
+
             </li>
         </ol>
     </div>

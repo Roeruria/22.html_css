@@ -4,10 +4,37 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    list-style: none;
     font-family: "Chocolate Classical Sans", sans-serif;
     text-decoration: none;
 }
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-flow: row wrap;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-flow: row wrap;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.date-input {
+    &::-webkit-calendar-picker-indicator {
+        opacity: 0;
+        cursor: pointer;
+    }
+}
+
+
 
 /* =====header starts===== */
 header {
@@ -113,7 +140,8 @@ header {
     background-color: rgba(97, 179, 226, 0.8);
     /* 混和顏色 */
     background-blend-mode: multiply;
-    padding: 0px 4.75rem;
+    padding: 0px 20%;
+    margin-bottom: 250px;
 }
 
 .banner {
@@ -147,7 +175,10 @@ h2 {
     border-top-left-radius: 0px;
     display: flex;
     flex-direction: column;
-    padding: 12px 20px 16px 20px;
+    justify-content: center;
+    padding: 16px 4%;
+    width: 100%;
+    box-shadow: 0 0 40px 1px rgba(201, 144, 144, 0.2);
 }
 
 /* =====選擇訂票方式===== */
@@ -157,22 +188,23 @@ h2 {
 }
 
 .onactive {
-    height: 60px;
+    height: 50px;
     width: 90px;
     border-top-left-radius: 5px;
     background-color: #ffffff;
     padding: 12px;
-    padding-top: 16px;
+    padding-top: 14px;
+    list-style: none;
 }
 
 .offactive {
-    height: 60px;
+    height: 50px;
     width: 90px;
     border-top-right-radius: 5px;
     background-color: rgba(255, 255, 255, 0.3);
     padding: 12px;
-    padding-top: 16px;
-
+    padding-top: 14px;
+    list-style: none;
 }
 
 .active {
@@ -192,28 +224,19 @@ h2 {
     width: 300px;
 }
 
-.flex-between {
+.acenter {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
     flex-flow: row wrap;
-}
-
-.flex-row {
-    display: flex;
-    flex-direction: row;
-}
-
-.flex-column {
-    display: flex;
-    flex-direction: column;
 }
 
 .text14px {
     font-size: 14px;
+    color: #999;
 }
 
 
-select {
+.dropdown-first {
     border: 1px solid #ffffff;
     background-color: #ffffff;
     color: #333;
@@ -229,7 +252,6 @@ select {
 form {
     width: auto;
     position: relative;
-    /* 只是讓position作用 */
 }
 
 .arrow {
@@ -258,24 +280,183 @@ option:checked {
     margin-left: 16px;
 }
 
+.swich-icon {
+    width: 24px;
+    margin: 16px 8px 0px 8px;
+}
+
 /* =====車程===== */
 /* =====起訖選擇===== */
 
-.box-design {
+.box-design-first {
     border-radius: 5px;
     border: rgb(214, 214, 214)solid 1px;
+    background-color: #ffffff;
+    height: 52px;
+    position: relative;
+    padding-left: 36px;
+    margin: 4px 8px;
 }
 
-.img36px {
+.icon24px {
     color: #db5009;
+    font-size: 24px;
+    /* margin:16px 8px 0px 8px; */
+    position: absolute;
+    top: 16px;
+    left: 2px;
+}
+
+.dropdown-second {
+    border: 0px;
+    background-color: #ffffff;
+    color: #333;
+    padding: 0;
+    width: 174px;
+    font-size: 16px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    outline: none;
+    margin-right: 20px;
+}
+
+.swich-icon {
+    background-color: #fff;
+    width: 36px;
 }
 
 /* =====起訖選擇===== */
+/* =====日期選擇===== */
+.box-design2 {
+    border-radius: 5px;
+    border: rgb(214, 214, 214)solid 1px;
+    background-color: #fff;
+    width: 45%;
+    height: 52px;
+    position: relative;
+    padding-left: 36px;
+    margin: 4px 8px;
+}
+
+/* =====日期選擇===== */
+/* =====票種選擇===== */
+
+.form-ticket {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.box-design-ticket {
+    border-radius: 5px;
+    border: rgb(214, 214, 214)solid 1px;
+    background-color: #fff;
+    height: 52px;
+    position: relative;
+    padding: 2px 4px;
+    margin: 4px 8px;
+
+}
+
+.dropdown-ticket {
+    border: 0px;
+    background-color: rgba(255, 255, 255, 0);
+    color: #333;
+    padding: 0;
+    width: 60px;
+    font-size: 16px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    outline: none;
+    margin-right: 20px;
+
+}
+
+/* =====票種選擇===== */
+/* =====驗證碼===== */
+
+.end {
+    display: flex;
+    justify-content: end;
+    margin: 4px 0 28px 0;
+}
+
+.mr28px {
+    margin-right: 28px;
+}
+
+.box-design-text {
+    border-radius: 5px;
+    border: rgb(214, 214, 214)solid 1px;
+    background-color: #fff;
+    height: 52px;
+    position: relative;
+    padding: 2px 4px;
+    margin-right: 4px;
+}
+
+.button {
+    background-color: #db5009;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    width: 260px;
+    margin: auto;
+    margin-bottom: 16px;
+}
+
+.button:hover {
+    background-color: #ec6623;
+}
+
+
+.button:active {
+    background-color: #cc7100;
+}
+
+/* =====驗證碼===== */
+
+
+
+
+
+
+/* =====注意事項===== */
+
+.notice {
+    margin: auto;
+    padding: 0 20%;
+    color: #666;
+    font-size: 13px;
+    letter-spacing: 1px;
+    line-height: 20px;
+}
+
+.notice-ticket {
+    color: #cc7100;
+    padding: 2px 16px;
+}
+
+
+/* =====注意事項===== */
+
+
 /* =====search box ends===== */
 
 
 /* ================================ 手機版樣式 ========================================== */
-@media (max-width: 660px) {
+@media (max-width: 480px) {
 
     /* =====header starts===== */
     .hamburger {
@@ -292,6 +473,8 @@ option:checked {
         background-color: #ffffff;
         padding-top: 60px;
         transition: right 0.3s ease;
+        z-index: 2;
+        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
     }
 
     /* 顯示主選單 */
@@ -354,9 +537,53 @@ option:checked {
     }
 
     .container {
-        padding: 24px;
+        margin-bottom: 500px;
+        padding-right: 5%;
+        padding-left: 5%;
     }
 
     /* =====section ends===== */
+    .position {
+        position: relative;
+    }
 
+    .swich-icon {
+        border-radius: 50%;
+        border: #999 solid 1px;
+        position: absolute;
+        top: 16%;
+        right: -24px;
+        z-index: 1;
+        background-color: #fff;
+        width: 50px;
+        padding: 4px;
+    }
+
+    .box-design-first {
+        width: 100%;
+        padding-left: 36px;
+        margin: 4px 0px;
+    }
+
+    /* =====票種選擇===== */
+
+    .form-ticket {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .box-design-ticket {
+        width: 28%;
+    }
+
+    .dropdown-ticket {
+        width: 60px;
+    }
+
+    /* =====票種選擇===== */
+    /* =====驗證碼===== */
+
+
+    /* =====驗證碼===== */
 }
