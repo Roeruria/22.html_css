@@ -21,6 +21,10 @@
     justify-content: space-between;
 }
 
+.m-20px {
+    margin: 8px 0;
+}
+
 /* 水平排列 */
 .flex-row {
     display: flex;
@@ -152,6 +156,14 @@ header {
     max-height: 500px;
     opacity: 1;
     visibility: visible;
+}
+
+.mr8px {
+    margin-right: 8px;
+}
+
+.d-block {
+    display: none;
 }
 
 /* =====header===== */
@@ -407,10 +419,6 @@ option:checked {
     margin: 4px 0 28px 0;
 }
 
-.mr28px {
-    margin-right: 28px;
-}
-
 .box-design-text {
     border-radius: 5px;
     border: rgb(214, 214, 214)solid 1px;
@@ -420,6 +428,21 @@ option:checked {
     padding: 2px 4px;
     margin-right: 4px;
 }
+
+.button-small {
+    background-color: #fff;
+    border: none;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.m16px {
+    margin: 0.5rem;
+    cursor: pointer;
+}
+
 
 .button {
     background-color: #db5009;
@@ -461,10 +484,15 @@ option:checked {
 .icon24px-r {
     color: #db5009;
     font-size: 24px;
-    /* margin:16px 8px 0px 8px; */
     position: absolute;
     top: 24px;
-    right: 12px;
+    right: 24px;
+    transition: background-color 0.s ease, transform 0.1s ease;
+}
+
+.icon24px-r:hover {
+    position: absolute;
+    right: 16px;
 }
 
 .wapper-box {
@@ -594,11 +622,6 @@ footer p {
         padding: 4px 16px;
     }
 
-    /* .dropdown {
-        position: static;
-        border: none;
-    } */
-
     .menu li>.dropdown {
         max-height: none;
         opacity: 1;
@@ -607,7 +630,6 @@ footer p {
         padding-bottom: 16px;
     }
 
-    /* X 按鈕樣式 */
     .close-btn {
         position: absolute;
         top: 15px;
@@ -615,6 +637,10 @@ footer p {
         font-size: 24px;
         color: #666;
         cursor: pointer;
+        display: block;
+    }
+
+    .d-block {
         display: block;
     }
 

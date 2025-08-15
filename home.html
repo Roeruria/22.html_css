@@ -28,14 +28,25 @@
                 <label for="menu-toggle" class="close-btn">✕</label>
 
                 <li>
-                    <a href="#">預訂車票</a>
+                    <a href="#">
+                        <div class="flex-row">
+                            <div class="d-block">
+                                <i class="fa-solid fa-magnifying-glass mr8px"></i>
+                            </div>預訂車票
+                        </div>
+                    </a>
                     <ul class="dropdown">
                         <li><a href="./home.html">一般訂票</a></li>
                         <li><a href="./homeDiscount.html">信用卡優惠</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#">管理訂位
+                    <a href="#">
+                        <div class="flex-row">
+                            <div class="d-block">
+                                <i class="fa-solid fa-pen mr8px "></i>
+                            </div>管理訂位
+                        </div>
                     </a>
                     <ul class="dropdown">
                         <li><a href="#">訂位紀錄查詢、付款及修改</a></li>
@@ -43,20 +54,24 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#">交易/搭乘紀錄
+                    <a href="#">
+                        <div class="flex-row">
+                            <div class="d-block">
+                                <i class="fa-solid fa-credit-card mr8px"></i>
+                            </div>交易/搭乘紀錄
+                        </div>
                     </a>
                     <ul class="dropdown">
                         <li><a href="#">交易/搭乘紀錄</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#">會員專區
+                    <a href="#"><i class="fa-solid fa-globe mr8px"></i>繁體中文
                     </a>
                     <ul class="dropdown">
-                        <li><a href="#">個人資料 </a></li>
-                        <li><a href="#">點數詳情</a></li>
-                        <li><a href="#">信用卡設定</a></li>
-                        <li><a href="#">票券紀錄</a></li>
+                        <li><a href="home.html">繁體中文 </a></li>
+                        <li><a href="#">English</a></li>
+                        <li><a href="#">日本語</a></li>
                     </ul>
                 </li>
             </ul>
@@ -88,36 +103,36 @@
         <!-- 搜尋方式 starts-->
         <div class="search-box">
             <div class="flex-between">
-                <div class="first-column flex-row">
-                    <form action="" class="">
+                <div class="first-column flex-row m-20px">
+                    <form action="">
                         <select name="" class="dropdown-first">
-                            <option value="">單程</option>
-                            <option value="">去回程</option>
+                            <option value="1">單程</option>
+                            <option value="2">去回程</option>
                         </select><img src=".//img/angle-down-solid-full.svg" alt="" class="arrow">
                     </form>
                     <form action="">
                         <select name="" class="dropdown-first">
-                            <option value="">標準車廂</option>
-                            <option value="">商務車廂</option>
+                            <option value="1">標準車廂</option>
+                            <option value="2">商務車廂</option>
                         </select><img src=".//img/angle-down-solid-full.svg" alt="" class="arrow">
                     </form>
                     <form action="">
                         <select name="" class="dropdown-first">
-                            <option value="">無座位偏好</option>
-                            <option value="">靠窗優先</option>
-                            <option value="">走道優先</option>
+                            <option value="1">無座位偏好</option>
+                            <option value="2">靠窗優先</option>
+                            <option value="3">走道優先</option>
                         </select><img src=".//img/angle-down-solid-full.svg" alt="" class="arrow">
                     </form>
                 </div>
-                <div class="flex-row ">
-                    <p class="text14px">搜尋方式</p>
-                    <div class="form-check">
+                <div class="flex-row  m-20px">
+                    <p class="text14px  m-20px">搜尋方式</p>
+                    <div class="form-check  m-20px">
                         <input class="" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
                         <label class="" for="flexRadioDefault1">
                             時間
                         </label>
                     </div>
-                    <div class="form-check">
+                    <div class="form-check  m-20px">
                         <input class="" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
                         <label class="" for="flexRadioDefault2">
                             車次
@@ -402,7 +417,11 @@
             <!-- 車次 ends-->
             <!-- 驗證 -->
             <div class="end">
-                <img src="./img/0.png" alt="" class="mr28px"><input type="text" size=4 class="box-design-text">
+                <img src="./img/0.png" alt="" class="mr8px"><input type="text" size=4 class="box-design-text">
+                <div class="button-small">
+                    <i class="fa-solid fa-repeat m16px"></i> |
+                    <i class="fa-solid fa-volume-low m16px"></i>
+                </div>
             </div>
 
             <input type="button" value="開始查詢" class="button">
