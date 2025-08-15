@@ -55,7 +55,6 @@
     background-position: center;
     background-image: url("../img/bg.jpg");
     background-color: rgba(0, 0, 0, 0.3);
-    /* 混和顏色 */
     background-blend-mode: multiply;
     padding: 0px 20%;
     margin-bottom: 250px;
