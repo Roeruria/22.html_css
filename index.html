@@ -106,7 +106,7 @@
             <div class="flex-between">
                 <div class="first-column flex-row m-20px">
                     <form action="">
-                        <select name="" class="dropdown-first">
+                        <select name="" class="dropdown-first" id="inp">
                             <option value="1">單程</option>
                             <option value="2">去回程</option>
                         </select><img src=".//img/angle-down-solid-full.svg" alt="" class="arrow">
@@ -255,7 +255,7 @@
                         </div>
                     </div>
                     <!-- 3 回程-->
-                    <div class="flex-row">
+                    <div class="flex-row" id="disp" hidden>
                         <div class="box-design2 flex-row">
                             <i class="fa-regular fa-calendar icon24px"></i>
                             <div class="flex-column">
@@ -521,7 +521,20 @@
 
     <!-- footer -->
 
+    <script>
+        const inp = document.getElementById('inp');
+        const disp = document.getElementById('disp');
 
+        inp.addEventListener('change', (event) => {
+            const selectedValue = event.target.value;
+
+            if (selectedValue === '2') {
+                disp.removeAttribute('hidden');
+            } else {
+                disp.setAttribute('hidden', '');
+            }
+        });
+    </script>
 </body>
 
 </html>
